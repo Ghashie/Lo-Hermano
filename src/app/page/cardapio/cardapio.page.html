@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cardapio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-segment [(ngModel)]="pais" color="primary">
+  <ion-segment-button value="brasil">
+    <ion-label>Brasil</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="argentina">
+    <ion-label>Argentina</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="chile">
+    <ion-label>Chile</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<ion-grid [ngSwitch]="pais">
+  <ion-row *ngSwitchCase="'brasil'">
+    <ion-col size="6" *ngFor="let prato of pratosBrasil">
+      <ion-card>
+        <img [src]="prato.foto" />
+        <ion-card-header>
+          <ion-card-title>{{ prato.nome }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>R$ {{ prato.preco }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngSwitchCase="'argentina'">
+    <ion-col size="6" *ngFor="let prato of pratosArgentina">
+      <ion-card>
+        <img [src]="prato.foto" />
+        <ion-card-header>
+          <ion-card-title>{{ prato.nome }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>R$ {{ prato.preco }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngSwitchCase="'chile'">
+    <ion-col size="6" *ngFor="let prato of pratosChile">
+      <ion-card>
+        <img [src]="prato.foto" />
+        <ion-card-header>
+          <ion-card-title>{{ prato.nome }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>R$ {{ prato.preco }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

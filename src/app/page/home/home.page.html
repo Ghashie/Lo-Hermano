@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>O Hermano</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="slider" pager="true">
+    <div class="slide">
+      <img src="assets/slide1.png" alt="Deliciosas pizzas">
+    </div>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Cardápio</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Confira as nossas opções de pratos, lanches e sobremesas.</p>
+            <ion-button expand="block" routerLink="/cardapio">Ver cardápio</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Contato</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Entre em contato conosco e tire as suas dúvidas, sugestões ou reclamações.</p>
+            <ion-button expand="block"  routerLink="/contato">Contactar</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Reservas</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Garanta o seu lugar no nosso restaurante e aproveite o melhor da nossa culinária.</p>
+            <ion-button expand="block" routerLink="/reservations" (click)="presentToast()">Fazer reserva</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

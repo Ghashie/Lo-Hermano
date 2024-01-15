@@ -1,0 +1,58 @@
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="/login"></ion-icon>
+      <div id="logo">
+        <img src="assets/logo.jpeg" />
+      </div>
+      <div></div>
+    </div>
+    <h1>Faça seu login</h1>
+    <p>Faça login para acessar nossos benefícios</p>
+  </div>
+
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <ion-item>
+          <ion-icon name="mail"></ion-icon>
+          <ion-input type="email" placeholder="Email" id="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+          <ion-input type="password" placeholder="Senha" id="senha" [(ngModel)]="senha"></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="login()">Entrar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="line-text">
+      <span class="lines"></span>
+      <span class="text">Ou conecte-se com.
+        Caso ainda não tenha uma conta
+        <a routerLink="/cadastro">Cadastre-se</a>
+      </span>
+    </div>
+    
+
+    <ion-card class="social-wrapper">
+      <ion-card-content>
+        <div class="socials">
+          <ion-button class="btn-fb">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-tw">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-go">
+            <ion-icon name="logo-google"></ion-icon>
+          </ion-button>
+          <ion-button class="btn-ph">
+            <ion-icon name="call-outline"></ion-icon>
+          </ion-button>
+          
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

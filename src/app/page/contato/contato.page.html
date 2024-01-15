@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Página de Contato</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <!-- Nome -->
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input name="nome" type="text"></ion-input>
+    </ion-item>
+
+    <!-- E-mail -->
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input name="email" type="email"></ion-input>
+    </ion-item>
+
+    <!-- Mensagem -->
+    <ion-item>
+      <ion-label position="floating">Mensagem</ion-label>
+      <ion-textarea name="mensagem"></ion-textarea>
+    </ion-item>
+
+    <!-- Botão de Envio -->
+    <ion-button expand="full">Enviar Mensagem</ion-button>
+
+
+    <ion-item button (click)="abrirRedeSocial('facebook')" class="facebook">
+      <ion-icon slot="start" name="logo-facebook"></ion-icon>
+      <ion-label>Facebook</ion-label>
+    </ion-item>
+    <ion-item button (click)="abrirRedeSocial('instagram')" class="instagram">
+      <ion-icon slot="start" name="logo-instagram"></ion-icon>
+      <ion-label>Instagram</ion-label>
+    </ion-item>
+    <ion-item button (click)="abrirRedeSocial('twitter')" class="twitter">
+      <ion-icon slot="start" name="logo-twitter"></ion-icon>
+      <ion-label>Twitter</ion-label>
+    </ion-item>
+    <ion-item button (click)="abrirRedeSocial('youtube')" class="youtube">
+      <ion-icon slot="start" name="logo-youtube"></ion-icon>
+      <ion-label>YouTube</ion-label>
+    </ion-item>
+  </ion-list>
+
+  
+  
+  
+</ion-content>
